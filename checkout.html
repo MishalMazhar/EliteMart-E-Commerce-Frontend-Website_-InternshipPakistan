@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EliteMart | Checkout</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">EliteMart</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="checkout.html" class="active">Checkout</a></li>
+      </ul>
+      <div class="hamburger" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+    </nav>
+  </header>
+
+  <!-- Checkout Section -->
+  <section class="checkout container">
+    <h2 class="section-title">Checkout</h2>
+    <div class="checkout-grid">
+
+      <!-- Left: Form -->
+      <div class="checkout-form card">
+        <h3>Billing & Shipping</h3>
+        <form id="checkoutForm">
+          <label>Full Name</label>
+          <input type="text" placeholder="John Doe" required>
+
+          <label>Email Address</label>
+          <input type="email" placeholder="example@email.com" required>
+
+          <label>Phone Number</label>
+          <input type="tel" placeholder="+1 234 567 890" required>
+
+          <label>Address</label>
+          <textarea placeholder="123 Main Street, City, Country" required></textarea>
+
+          <label>Payment Method</label>
+          <select required>
+            <option value="">Select Payment</option>
+            <option>Credit / Debit Card</option>
+            <option>Cash on Delivery</option>
+            <option>PayPal</option>
+          </select>
+
+          <div class="payment-icons">
+            <i class="fab fa-cc-visa"></i>
+            <i class="fab fa-cc-mastercard"></i>
+            <i class="fab fa-cc-amex"></i>
+            <i class="fab fa-cc-paypal"></i>
+          </div>
+
+          <button type="submit" class="btn btn-checkout">
+            <i class="fas fa-lock"></i> Place Order Securely
+          </button>
+        </form>
+      </div>
+
+      <!-- Right: Order Summary -->
+      <div class="checkout-summary card">
+        <h3>Order Summary</h3>
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <span>$74.98</span>
+        </div>
+        <div class="summary-row">
+          <span>Shipping</span>
+          <span class="free-shipping">Free</span>
+        </div>
+        <div class="summary-row">
+          <span>Tax</span>
+          <span>$5.00</span>
+        </div>
+        <div class="summary-divider"></div>
+        <div class="summary-row total">
+          <span>Total</span>
+          <span>$79.98</span>
+        </div>
+        <p class="delivery-info"><i class="fas fa-truck"></i> Delivery in 3–5 business days</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About EliteMart</h3>
+        <p>Your one-stop destination for quality products at affordable prices.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p><i class="fas fa-envelope"></i> support@EliteMart.com</p>
+        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+      </div>
+      <div class="footer-section social">
+        <h3>Follow Us</h3>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 EliteMart | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EliteMart | Premium Online Shopping Experience</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+<nav class="navbar" aria-label="Main Navigation">
+      <div class="logo">EliteMart</div>
+      <div class="nav-search">
+        <input type="text" placeholder="Search products..." class="search-input">
+        <button class="search-btn">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html">Cart 🛒 <span class="cart-count">0</span></a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="nav-action-btn" onclick="toggleTheme()">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="nav-action-btn" onclick="toggleWishlist()">
+          <i class="fas fa-heart"></i>
+        </button>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="shop-hero">
+    <div class="container">
+      <h1>Welcome to EliteMart</h1>
+      <p>Discover amazing products at unbeatable prices. Your one-stop destination for quality shopping.</p>
+      <div class="hero-buttons">
+        <a href="shop.html" class="btn btn-primary">Shop Now</a>
+        <a href="#featured" class="btn btn-secondary">View Featured</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-card">
+          <i class="fas fa-shipping-fast"></i>
+          <h3>Free Shipping</h3>
+          <p>Free delivery on orders over $50</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Secure Payment</h3>
+          <p>100% secure payment processing</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-headset"></i>
+          <h3>24/7 Support</h3>
+          <p>Round-the-clock customer service</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section id="featured" class="featured-products">
+    <div class="container">
+      <h2>🔥 Trending Now</h2>
+      <p class="section-subtitle">Discover our most popular products</p>
+      
+      <div class="product-grid">
+        <div class="product-card" data-category="electronics">
+          <div class="category-badge">Electronics</div>
+          <img src="wireless headphone.webp" alt="Wireless Headphones">
+          <div class="product-info">
+            <h3>Wireless Headphones</h3>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span>(89 reviews)</span>
+            </div>
+            <p class="price">$59.99</p>
+            <button onclick="location.href='product.html?product=Wireless Headphones'" class="add-to-cart-btn">
+              <i class="fas fa-shopping-cart"></i> View Details
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="electronics">
+          <div class="category-badge">Electronics</div>
+          <img src="smart watch.webp" alt="Smartwatch Pro X">
+          <div class="product-info">
+            <h3>Smartwatch Pro X</h3>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span>(128 reviews)</span>
+            </div>
+            <p class="price">$129.99</p>
+            <button onclick="location.href='product.html?product=Smartwatch Pro X'" class="add-to-cart-btn">
+              <i class="fas fa-shopping-cart"></i> View Details
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="electronics">
+          <div class="category-badge">Electronics</div>
+          <img src="gaming laptop.jpg" alt="Gaming Laptop">
+          <div class="product-info">
+            <h3>Gaming Laptop</h3>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <span>(45 reviews)</span>
+            </div>
+            <p class="price">$999.99</p>
+            <button onclick="location.href='product.html?product=Gaming Laptop'" class="add-to-cart-btn">
+              <i class="fas fa-shopping-cart"></i> View Details
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <a href="shop.html" class="btn btn-outline">View All Products</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-content">
+        <h2>Stay Updated</h2>
+        <p>Subscribe to our newsletter for exclusive deals and new product announcements</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About EliteMart</h3>
+        <p>Your one-stop destination for quality products at affordable prices. We offer a wide range of electronics, clothing, and accessories.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="cart.html">Shopping Cart</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Info</h3>
+        <p><i class="fas fa-envelope"></i> info@EliteMart.com</p>
+        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+        <p><i class="fas fa-map-marker-alt"></i> 123 Commerce St, City, Country</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 EliteMart | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

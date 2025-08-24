@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EliteMart | Shopping Cart</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">EliteMart</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html" class="active"><i class="fas fa-shopping-cart"></i> Cart <span class="cart-count">0</span></a></li>
+      </ul>
+      <div class="hamburger" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+    </nav>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb container">
+    <a href="index.html">Home</a> <span>></span> <a href="shop.html">Shop</a> <span>></span> Shopping Cart
+  </div>
+
+  <!-- Main Cart Section -->
+  <main class="cart-container container">
+    <div class="cart-content">
+      <!-- Cart Header -->
+      <div class="cart-header">
+        <h1>Your Shopping Cart</h1>
+        <p class="cart-items-count"><span id="totalItems">0</span> items in your cart</p>
+      </div>
+
+      <!-- Cart Items -->
+      <div class="cart-items" id="cartItems">
+        <div class="empty-cart" id="emptyCart">
+          <div class="empty-cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+          <h2>Your cart is empty</h2>
+          <p>Looks like you haven't added anything yet.</p>
+          <a href="shop.html" class="btn btn-primary">Start Shopping</a>
+        </div>
+      </div>
+
+      <!-- Cart Summary -->
+      <div class="cart-summary">
+        <div class="summary-card">
+          <h3>Order Summary</h3>
+          
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span>$<span id="subtotal">0.00</span></span>
+          </div>
+          
+          <div class="summary-row">
+            <span>Shipping</span>
+            <span class="free-shipping">Free</span>
+          </div>
+          
+          <div class="summary-row">
+            <span>Tax</span>
+            <span>$<span id="tax">0.00</span></span>
+          </div>
+
+          <div class="summary-row">
+            <span>Discount</span>
+            <span id="discount">-$0.00</span>
+          </div>
+          
+          <div class="summary-divider"></div>
+          
+          <div class="summary-row total">
+            <span>Total</span>
+            <span>$<span id="total">0.00</span></span>
+          </div>
+
+          <!-- Coupon Code -->
+          <div class="coupon-box">
+            <input type="text" placeholder="Enter Promo Code">
+            <button class="btn btn-sm">Apply</button>
+          </div>
+
+          <button class="btn btn-checkout" onclick="proceedToCheckout()">
+            <i class="fas fa-lock"></i> Proceed to Checkout
+          </button>
+
+          <div class="secure-checkout">
+            <i class="fas fa-shield-alt"></i> Secure checkout guaranteed
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recommended Products -->
+    <section class="recommended-products">
+      <h2>You might also like</h2>
+      <div class="recommended-grid">
+        <div class="recommended-card">
+          <img src="iPhone-Premium-Case.webp" alt="Phone Case">
+          <h4>Premium Phone Case</h4>
+          <p class="price">$24.99</p>
+          <div class="stars">⭐⭐⭐⭐☆</div>
+          <button onclick="addToCart('Premium Phone Case', 24.99)" class="btn btn-sm">Add to Cart</button>
+        </div>
+        <div class="recommended-card">
+          <img src="fast charger.webp" alt="Fast Charger">
+          <h4>Fast Charger</h4>
+          <p class="price">$19.99</p>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <button onclick="addToCart('Fast Charger', 19.99)" class="btn btn-sm">Add to Cart</button>
+        </div>
+        <div class="recommended-card">
+          <img src="wireless-earbuds.avif" alt="Wireless Earbuds">
+          <h4>Wireless Earbuds</h4>
+          <p class="price">$49.99</p>
+          <div class="stars">⭐⭐⭐⭐☆</div>
+          <button onclick="addToCart('Wireless Earbuds', 49.99)" class="btn btn-sm">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About EliteMart</h3>
+        <p>Your one-stop destination for quality products at affordable prices. We offer a wide range of electronics, clothing, and accessories.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="cart.html">Shopping Cart</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Info</h3>
+        <p><i class="fas fa-envelope"></i> info@EliteMart.com</p>
+        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+        <p><i class="fas fa-map-marker-alt"></i> 123 Commerce St, City, Country</p>
+      </div>
+      <div class="footer-section social">
+        <h3>Follow Us</h3>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 EliteMart | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

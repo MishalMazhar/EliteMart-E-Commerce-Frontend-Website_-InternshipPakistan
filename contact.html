@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | EliteMart</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">EliteMart</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="cart.html">Cart 🛒 <span class="cart-count">0</span></a></li>
+      </ul>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </nav>
+  </header>
+
+  <section class="container" style="padding: 3rem 2rem;">
+    <h2>Contact Us</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; max-width: 1200px; margin: 0 auto;">
+      
+      <!-- Contact Information -->
+      <div>
+        <h3 style="margin-bottom: 1.5rem;">Get in Touch</h3>
+        <div style="background: #fff; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+          <div style="margin-bottom: 1.5rem;">
+            <h4 style="color: #f39c12; margin-bottom: 0.5rem;"><i class="fas fa-map-marker-alt"></i> Address</h4>
+            <p>123 Commerce Street<br>Business District<br>City, Country 12345</p>
+          </div>
+          
+          <div style="margin-bottom: 1.5rem;">
+            <h4 style="color: #f39c12; margin-bottom: 0.5rem;"><i class="fas fa-phone"></i> Phone</h4>
+            <p>+1 (555) 123-4567<br>+1 (555) 987-6543</p>
+          </div>
+          
+          <div style="margin-bottom: 1.5rem;">
+            <h4 style="color: #f39c12; margin-bottom: 0.5rem;"><i class="fas fa-envelope"></i> Email</h4>
+            <p>info@shopease.com<br>support@shopease.com</p>
+          </div>
+          
+          <div>
+            <h4 style="color: #f39c12; margin-bottom: 0.5rem;"><i class="fas fa-clock"></i> Business Hours</h4>
+            <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div>
+        <h3 style="margin-bottom: 1.5rem;">Send us a Message</h3>
+        <form style="background: #fff; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+          <div style="margin-bottom: 1rem;">
+            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Name</label>
+            <input type="text" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 5px;" required>
+          </div>
+          
+          <div style="margin-bottom: 1rem;">
+            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Email</label>
+            <input type="email" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 5px;" required>
+          </div>
+          
+          <div style="margin-bottom: 1rem;">
+            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Subject</label>
+            <input type="text" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 5px;" required>
+          </div>
+          
+          <div style="margin-bottom: 1.5rem;">
+            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Message</label>
+            <textarea style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 5px; height: 120px; resize: vertical;" required></textarea>
+          </div>
+          
+          <button type="submit" style="background: #f39c12; color: white; border: none; padding: 1rem 2rem; border-radius: 25px; font-weight: 600; cursor: pointer; width: 100%;">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div style="margin-top: 4rem;">
+      <h3 style="text-align: center; margin-bottom: 2rem;">Frequently Asked Questions</h3>
+      <div style="max-width: 800px; margin: 0 auto;">
+        <div style="background: #fff; padding: 1.5rem; margin-bottom: 1rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+          <h4 style="color: #f39c12; margin-bottom: 0.5rem;">How long does shipping take?</h4>
+          <p>Standard shipping takes 3-5 business days. Express shipping is available for next-day delivery.</p>
+        </div>
+        
+        <div style="background: #fff; padding: 1.5rem; margin-bottom: 1rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+          <h4 style="color: #f39c12; margin-bottom: 0.5rem;">What is your return policy?</h4>
+          <p>We offer a 30-day return policy for all unused items in their original packaging.</p>
+        </div>
+        
+        <div style="background: #fff; padding: 1.5rem; margin-bottom: 1rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+          <h4 style="color: #f39c12; margin-bottom: 0.5rem;">Do you ship internationally?</h4>
+          <p>Yes, we ship to most countries worldwide. International shipping rates and times vary by location.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About ShopEase</h3>
+        <p>Your one-stop destination for quality products at affordable prices. We offer a wide range of electronics, clothing, and accessories.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="cart.html">Shopping Cart</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Info</h3>
+        <p><i class="fas fa-envelope"></i> info@shopease.com</p>
+        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+        <p><i class="fas fa-map-marker-alt"></i> 123 Commerce St, City, Country</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 ShopEase | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
